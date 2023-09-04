@@ -1,0 +1,236 @@
+/* external style of css --> it's really good way to style the html content of the page.Nowadays most the developers following this way  */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  border-top: 5px solid #1098ad;
+  /* not all the propert inheritance from parents */
+  color: red;
+  font-family: sans-serif;
+
+  /* border-top: 5px solid #1098ad; */
+}
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+}
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 26px;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 40px;
+  /* font-family: sans-serif; */
+  margin-bottom: 40px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  /* font-family: sans-serif; */
+}
+h4 {
+  font-size: 20px;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+  text-align: center;
+}
+p {
+  font-size: 22px;
+  /* font-family: sans-serif; */
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+article {
+  margin-bottom: 60px;
+}
+li {
+  font-size: 20px;
+  padding: 10px;
+  /* font-family: sans-serif; */
+  /* list-style-type: circle; */
+}
+ul,
+ol {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+nav a:link {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 10px;
+  /* padding: 10px; */
+}
+/* nav a:link:last-child {
+  margin-right: 0;
+}
+nav a:link:first-child {
+  margin-right: 0;
+} */
+/* desentend Selector */
+/* footer p {
+  font-size: 16px;
+}
+ nested desentend selector 
+article header p {
+  font-size: 16px;
+  font-style: italic;
+} */
+
+/* #Id Selector */
+#auther {
+  font-size: 18px;
+  font-style: italic;
+}
+#Copyrights {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 30px;
+  text-align: center;
+}
+.related-auther {
+  font-size: 18px;
+  font-weight: bold;
+}
+/* .ul-li {
+  list-style: none;
+} */
+.related-ul {
+  list-style: none;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.main-header {
+  /* if we give only two values it means (top and bottom, left and right) then we give 4 values it means (top,right,bottom,left) */
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+  /* position: relative; */
+}
+aside {
+  color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  width: 500px;
+}
+li:first-child {
+  font-weight: bold;
+}
+
+/* li:nth-child(2) {
+  font-style: italic;
+}
+li:nth-child(odd) {
+  color: red;
+} */
+/* !this won't work in normal elements like paragraph it's complicated to design that */
+/* article p:last-child {
+  color: red;
+} */
+/* ?psudo class in links */
+/* pseudo class selectors (:) */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+a:visited {
+  color: #1098ad;
+}
+a:hover {
+  color: orangered;
+  text-decoration: underline orangered;
+  font-weight: bold;
+}
+a:active {
+  color: green;
+  font-style: italic;
+}
+.post-header {
+  margin-bottom: 40px;
+  /* position: relative; */
+}
+.post-img {
+  /* width: 800px; */
+  /* it's take dimenstion of parents width  */
+  width: 100%;
+  /* height: 200px; */
+  height: auto;
+  /* margin: 100px; */
+}
+button {
+  position: absolute;
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  /* bottom: 50px;
+  right: 50px; */
+  /* top: 0;
+  left: 0; */
+  /* top: 0;
+  right: 0; */
+  bottom: 50px;
+  right: 50px;
+}
+/* pseudo element selectors (::) */
+h1::first-letter {
+  font-style: normal;
+  margin-right: 10px;
+}
+/* h2::first-letter {
+  font-size: 80px;
+} */
+
+/* sibling selector */
+/* h3 + p::first-line {
+  color: red;
+} */
+h2 {
+  /* this bg colour for reference to fit the position property */
+  /* background-color: orange; */
+  position: relative;
+}
+h2::after {
+  /* bydefault pseudo elements are inline elements */
+  content: "top";
+  color: #ffffff;
+  background-color: blueviolet;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 16px;
+  padding: 5px 10px;
+  position: absolute;
+  margin-left: 20px;
+  /* top: 0;
+  right: 0; */
+  /* bottom: 0;
+  right: 0; */
+  /* ?we can also give negative values values in position values if we give negative values it will move outside the parent class */
+  right: -25px;
+  top: -15px;
+}
